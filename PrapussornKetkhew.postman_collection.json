@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "430e1306-a19b-46fe-a984-2f2cc2b9ac83",
+		"name": "PrapussornKetkhew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19538042",
+		"_collection_link": "https://orange-trinity-253251.postman.co/workspace/Postman-Tranning~ca1456f8-8b09-4beb-9830-ca1caf4cff4c/collection/19538042-430e1306-a19b-46fe-a984-2f2cc2b9ac83?action=share&source=collection_link&creator=19538042"
+	},
+	"item": [
+		{
+			"name": "GET_PET",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Status 200\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/11",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_ORDER",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order/666",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order",
+						"666"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_USER",
+			"request": {
+				"method": "POST",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "PUT_USER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"username\": \"PrapK\",\r\n  \"firstName\": \"Prapussorn\",\r\n  \"lastName\": \"Ketkhew\",\r\n  \"email\": \"prapussorn.k@icloud.com\",\r\n  \"password\": \"Postman_123\",\r\n  \"phone\": \"0925955993\",\r\n  \"userStatus\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/:id9223372036854757406",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						":id9223372036854757406"
+					],
+					"variable": [
+						{
+							"key": "id9223372036854757406",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET_USER",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user/PrapK",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user",
+						"PrapK"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
